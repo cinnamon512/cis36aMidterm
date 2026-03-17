@@ -34,17 +34,30 @@ public class Playlist {
 
     }
 
-    public int goForwardOneSong(){
-        if(currentIndex == 999){
+    public int goForwardOneSong() {
+        if (currentIndex == 999) {
             currentIndex = 0;
-            //return currentIndex;
-        }
-        else {
+            return currentIndex;
+        } else {
             currentIndex++;
-            //return currentIndex;
+            return currentIndex;
         }
 
-        return currentIndex;
+        //return currentIndex;
+
+
+        /// one other way to do it
+        if (this.currentIndex < 999) {
+            this.currentIndex++;
+            return this.currentIndex;
+        } else {
+            this.currentIndex = 0;
+            return currentIndex;
+        }
+
+        //ONE LINE IT
+        
+
     }
 
 }
